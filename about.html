@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Anjali Portfolio</title>
+    <link rel="stylesheet" href="about.style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Anjali</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certificates.html">Certificates</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="hobbies.html">Hobbies</a></div>
+              
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="hobbies.html">Hobbies</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <img src="main.png" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">About Me</h1>
+                <p style="margin-top: 20px;" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+                    Hi, I’m Anjali — a Mechanical Engineering student at MIT Academy of Engineering, constantly balancing creativity with logic, tradition with innovation. My world revolves around curiosity, design, and the endless desire to understand how things function — and how they could function better. 😊🚀
+
+                    I come from the beautiful hill station of Panhala, with roots deep in Kolhapur’s culture and values. Raised between the calm of the hills and the energy of the city, I’ve always found strength in my family — they’re my anchor and my compass. Whether it's learning patience from my mother, resilience from my father, or sharing laughs and life lessons with my siblings, my family has shaped who I am more than any textbook ever could.🪷🍃🌙
+
+                    We’re the kind of household where mornings begin with prayers, evenings end with shared stories over dinner, and in between, there’s always space for a little hustle, a little help, and a whole lot of heart. No matter how far I go, this foundation stays with me.☕💦🍁
+
+                    Outside of academics, you’ll find me deep in a good book, cycling through town, crafting something by hand, or sipping chai with my loved ones. My lifestyle blends discipline with joy, and my work reflects the same: purposeful, thoughtful, and human.
+
+                    This portfolio is more than a showcase — it’s a window into my journey, shaped by my roots, my people, and my pursuit of purpose.
+                </p>
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/_messyballika_"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(0px)";
+        }
+
+        function cancel(){
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(-500px)";
+        }
+    </script>
+</body>
+</html>

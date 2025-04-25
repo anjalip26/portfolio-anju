@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Anjali Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Anjali</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certificates.html">Certificates</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="hobbies.html">Hobbies</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="hobbies.html">Hobbies</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <img src="index page.jpeg" alt="Anjali's Photo">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Anjali Patil</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+                    I'm <span></span>
+                </div>
+                <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+                    <strong>I'm a first-year Mechanical Engineering student at MIT Academy of Engineering, Pune.</strong>  
+                    I’m passionate about space, creativity, and using tech to solve everyday problems.  
+                    I love coding, designing, and learning new things that push my boundaries.  
+                    My dream? To pursue aerospace engineering and make a mark beyond the skies.
+                </p>
+
+                
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="https://github.com/anjali" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/_messyballika_"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+
+        // Typewriter effect
+        const words = ["Innovative", "Analytical", "Driven"];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+        const span = document.querySelector(".typewriter span");
+
+        // Clear previous content
+        span.textContent = "";
+
+        function type() {
+            if (i < words.length) {
+                if (!isDeleting && j <= words[i].length) {
+                    currentWord = words[i].substring(0, j++);
+                    span.textContent = currentWord;
+                }
+
+                if (isDeleting && j >= 0) {
+                    currentWord = words[i].substring(0, j--);
+                    span.textContent = currentWord;
+                }
+
+                if (!isDeleting && j === words[i].length + 1) {
+                    isDeleting = true;
+                    setTimeout(type, 1000); // Pause after word is complete
+                    return;
+                }
+
+                if (isDeleting && j === 0) {
+                    isDeleting = false;
+                    i = (i + 1) % words.length;
+                }
+
+                setTimeout(type, isDeleting ? 50 : 150);
+            }
+        }
+
+        type(); // Start typing effect
+    </script>
+
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(0px)";
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(-500px)";
+        }
+    </script>
+</body>
+</html>

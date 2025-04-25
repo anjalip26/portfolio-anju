@@ -1,0 +1,125 @@
+
+* {
+    margin: 2;
+    padding: 2;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(254, 215, 173));
+    color: #333;
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: rgb(109, 67, 0);
+    color: white;
+    padding: 15px 0;
+  }
+  .nav-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  .links {
+    display: flex;
+    gap: 20px;
+  }
+  .link a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .skills-content {
+    max-width: 800px;
+  }
+  .skills-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .skills-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .skills-group {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .skills-group h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .skills-group ul {
+    list-style-type: none;
+  }
+  .skills-group li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  /* Add or update this section */
+
+.skills-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skills-content {
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.8;
+  }
+  
+  .skills-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .skills-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .skills-group {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  
+  .skills-group h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .skills-group ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills-group li {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  

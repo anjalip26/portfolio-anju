@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificates - Anjali Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #fff, #fed7ad);
+      margin: 0;
+      padding: 0;
+    }
+
+    .certificates-section {
+      padding: 50px 30px;
+    }
+
+    .certificates-section h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #6d4300;
+    }
+
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .certificates-grid.second-row {
+      margin-top: 30px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certificate-box {
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 15px;
+      overflow: hidden;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .certificate-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+    .certificate-box img {
+      width: 100%;
+      border-radius: 10px;
+      height: auto;
+      display: block;
+    }
+
+    .certificate-description {
+      margin-top: 12px;
+      font-size: 14px;
+      text-align: center;
+      color: #333;
+    }
+
+    @media (max-width: 900px) {
+      .certificates-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .certificates-grid.second-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .certificates-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>Anjali</span>
+      </div>
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certificates.html">Certificates</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="hobbies.html">Hobbies</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="hobbies.html">Hobbies</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="certificates-section">
+    <h1 data-aos="zoom-in-up">My Certificates</h1>
+
+    <!-- First Row - 3 Certificates -->
+    <div class="certificates-grid">
+      <div class="certificate-box" data-aos="zoom-in" data-aos-delay="100">
+        <img src="basic python.jpeg" alt="Certificate 1" />
+        <div class="certificate-description">Completed Python Programming Fundamentals by Hackerrank platform</div>
+      </div>
+      <div class="certificate-box" data-aos="zoom-in" data-aos-delay="200">
+        <img src="problem soloving.jpeg" alt="Certificate 2" />
+        <div class="certificate-description">Python Problem-Solving Challenge by Hackerrank Platform</div>
+      </div>
+      <div class="certificate-box" data-aos="zoom-in" data-aos-delay="300">
+        <img src="techsprint.jpeg" alt="Certificate 3" />
+        <div class="certificate-description">Participated in techsprint of college</div>
+      </div>
+    </div>
+
+    <!-- Second Row - 2 Certificates -->
+    <div class="certificates-grid second-row">
+      <div class="certificate-box" data-aos="zoom-in" data-aos-delay="400">
+        <img src="cert4.jpg" alt="Certificate 4" />
+        <div class="certificate-description">Xyz</div>
+      </div>
+      <div class="certificate-box" data-aos="zoom-in" data-aos-delay="500">
+        <img src="cert5.jpg" alt="Certificate 5" />
+        <div class="certificate-description">xyz</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+
+    function hamburg() {
+      const navbar = document.querySelector(".dropdown");
+      navbar.style.transform = "translateY(0px)";
+    }
+
+    function cancel() {
+      const navbar = document.querySelector(".dropdown");
+      navbar.style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>
